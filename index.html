@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASTPAY — Abonnements Digitaux Instantanés</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- TOPBAR / NAVBAR -->
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a href="#" class="logo">FAST<span>PAY</span></a>
+            
+            <nav class="main-nav">
+                <a href="#services" data-i18n="nav_services">Services</a>
+                <a href="#features">Avantages</a>
+                <a href="#how-it-works" data-i18n="nav_how">Comment ça marche</a>
+                <a href="#payments" data-i18n="nav_payments">Paiement</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="topbar-controls">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Changer de thème">🌙</button>
+
+                <div class="select-wrap">
+                    <select id="lang-select" aria-label="Langue">
+                        <option value="fr">FR 🇫🇷</option>
+                        <option value="en">EN 🇬🇧</option>
+                    </select>
+                </div>
+
+                <button class="btn-ghost" data-i18n="btn_login">Connexion</button>
+                <button class="btn-primary" data-i18n="btn_register">S'inscrire</button>
+                <button class="burger" aria-label="Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <span class="eyebrow" data-i18n="hero_eyebrow">⚡ Instantané & Sécurisé</span>
+                    <h1><span data-i18n="hero_title_1">Accédez à vos services</span> <br><span>préférés en un clic.</span></h1>
+                    <p data-i18n="hero_subtitle">Achetez vos comptes Netflix, ChatGPT Plus, Spotify et bien plus, payables via Mobile Money & Carte bancaire.</p>
+                    
+                    <div class="hero-search">
+                        <input type="text" id="search-input" placeholder="Rechercher un service (ex: Netflix, ChatGPT)...">
+                        <button type="button" data-i18n="btn_search">Rechercher</button>
+                    </div>
+
+                    <div class="hero-chips">
+                        <span class="chip">🔥 Netflix Premium</span>
+                        <span class="chip">🤖 ChatGPT Plus</span>
+                        <span class="chip">🎵 Spotify</span>
+                        <span class="chip">🎮 PlayStation</span>
+                        <span class="chip">🧠 Claude Pro</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="phone-frame">
+                        <div class="mock-row paid">
+                            <span>Netflix 1 mois</span>
+                            <b>✓ 3 500 F</b>
+                        </div>
+                        <div class="mock-row paid">
+                            <span>ChatGPT Plus</span>
+                            <b>✓ 13 500 F</b>
+                        </div>
+                        <div class="mock-row paid">
+                            <span>Spotify Duo</span>
+                            <b>✓ 3 000 F</b>
+                        </div>
+                        <div class="mock-row">
+                            <span>Canal+ Evasion</span>
+                            <b style="color:var(--text-muted)">En attente</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER DE DÉFILEMENT -->
+        <div class="flapboard">
+            <div class="flapboard-track">
+                <span>⚡ REÇUS EN 30 SECONDES</span>
+                <span>🔒 PAIEMENTS 100% SÉCURISÉS</span>
+                <span>📱 MOOV & MTN MONEY DISPONIBLES</span>
+                <span>🎯 SUPPORT CLIENT 24/7 VIA WHATSAPP</span>
+                <span>⚡ REÇUS EN 30 SECONDES</span>
+                <span>🔒 PAIEMENTS 100% SÉCURISÉS</span>
+            </div>
+        </div>
+
+        <!-- STATISTIQUES -->
+        <section class="stats-strip">
+            <div class="stats-inner">
+                <div class="stat-item">
+                    <div class="stat-number">+15 000</div>
+                    <div class="stat-label">Comptes activés</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.8%</div>
+                    <div class="stat-label">Taux de satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">&lt; 1 min</div>
+                    <div class="stat-label">Livraison rapide</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Assistance Client</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOGUE -->
+        <section class="section" id="services">
+            <div class="section-head">
+                <div>
+                    <span class="section-eyebrow">Catalogue</span>
+                    <h2>Explorez nos offres disponibles</h2>
+                </div>
+                <div class="tab-filters" id="category-filters">
+                    <button class="tab active" data-cat="all">Tous</button>
+                    <button class="tab" data-cat="streaming">Streaming</button>
+                    <button class="tab" data-cat="ia">IA & Tech</button>
+                    <button class="tab" data-cat="gaming">Gaming</button>
+                    <button class="tab" data-cat="cadeaux">Cartes Cadeaux</button>
+                </div>
+            </div>
+
+            <div class="service-grid" id="service-grid">
+                <!-- Rendu Dynamique via JS -->
+            </div>
+        </section>
+
+        <!-- AVANTAGES -->
+        <section class="section" id="features">
+            <span class="section-eyebrow">Pourquoi FASTPAY ?</span>
+            <h2>L'expérience d'abonnement sans friction</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Livraison Instantanée</h3>
+                    <p>Vos accès et identifiants sont envoyés instantanément sur votre email et votre WhatsApp après paiement.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Comptes Garantis</h3>
+                    <p>Tous nos services bénéficient d'une garantie totale sur toute la durée de la souscription.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💵</div>
+                    <h3>Mobile Money Accepté</h3>
+                    <p>Plus besoin de carte internationale. Payez simplement avec vos moyens de paiement locaux.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <h3>Support Client 24/7</h3>
+                    <p>Notre équipe est à votre disposition en permanence sur WhatsApp pour résoudre le moindre souci.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMENT ÇA MARCHE -->
+        <section class="section" id="how-it-works">
+            <span class="section-eyebrow">Simplicité</span>
+            <h2>Comment ça marche ?</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">01.</div>
+                    <h3>Choisissez votre offre</h3>
+                    <p>Sélectionnez le service voulu et la durée d'abonnement souhaitée dans le catalogue.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">02.</div>
+                    <h3>Payez facilement</h3>
+                    <p>Réglez par Mobile Money (MTN, Moov, Orange, Wave) ou Carte bancaire en toute sécurité.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">03.</div>
+                    <h3>Profitez du service</h3>
+                    <p>Recevez vos codes et accès par WhatsApp et Email immédiatement après validation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOYENS DE PAIEMENT -->
+        <section class="section" id="payments">
+            <span class="section-eyebrow">Paiement</span>
+            <h2>Vos moyens de paiement locaux</h2>
+
+            <div class="pay-grid">
+                <div class="pay-card">
+                    <span class="pay-icon">📱</span>
+                    <h4>Mobile Money</h4>
+                    <p>MTN, Moov, Orange, Wave, M-Pesa</p>
+                </div>
+                <div class="pay-card">
+                    <span class="pay-icon">💳</span>
+                    <h4>Cartes bancaires</h4>
+                    <p>Visa & Mastercard internationales</p>
+                </div>
+                <div class="pay-card">
+                    <span class="pay-icon">🏦</span>
+                    <h4>Virement Direct</h4>
+                    <p>Transfert bancaire sécurisé</p>
+                </div>
+                <div class="pay-card">
+                    <span class="pay-icon">💵</span>
+                    <h4>Agents Cash</h4>
+                    <p>Réseau de points de dépôt locaux</p>
+                </div>
+            </div>
+
+            <div class="phone-demo">
+                <h4>Testez votre format de numéro :</h4>
+                <div class="phone-input-row">
+                    <select id="country-select"></select>
+                    <input type="tel" id="phone-input" placeholder="97 00 00 00">
+                </div>
+                <div class="phone-preview" id="phone-preview">+229 97 00 00 00</div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <span class="section-eyebrow">Questions Fréquentes</span>
+            <h2>Tout ce que vous devez savoir</h2>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">Comment vais-je recevoir mon abonnement ? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Dès la confirmation du paiement, vos accès vous sont envoyés automatiquement sur votre adresse email et votre compte WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Que faire si mon abonnement s'arrête ? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Tous nos abonnements disposent d'une garantie intégrale. Contactez l'assistance WhatsApp et nous réactiverons votre compte sans frais.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Puis-je recharger mon compte personnel ? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Oui ! Selon le service (Canva, ChatGPT, Spotify), nous pouvons soit recharger votre propre compte soit vous livrer un nouveau profil pré-activé.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION FINAL -->
+        <section class="cta-final">
+            <h2>Prêt à simplifier vos abonnements digitaux ?</h2>
+            <button class="btn-primary lg">Créer un compte maintenant</button>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo">FAST<span>PAY</span></a>
+                <p>Plateforme de revente et de paiement d'abonnements digitaux de référence.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#services">Netflix Premium</a>
+                <a href="#services">ChatGPT Plus</a>
+                <a href="#services">Spotify Premium</a>
+                <a href="#services">Canal+ Evasion</a>
+            </div>
+            <div class="footer-col">
+                <h4>Entreprise</h4>
+                <a href="#features">À propos</a>
+                <a href="#how-it-works">Comment ça marche</a>
+                <a href="#payments">Moyens de paiement</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#faq">FAQ & Aide</a>
+                <a href="https://wa.me/22900000000" target="_blank">WhatsApp Direct</a>
+                <a href="#">Conditions d'utilisation</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 FASTPAY. Tous droits réservés.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/22900000000" class="wa-float" target="_blank" aria-label="WhatsApp Support">💬</a>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
